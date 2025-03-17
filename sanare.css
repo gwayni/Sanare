@@ -1,0 +1,351 @@
+/* General Reset */
+* {
+    margin: 5;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif; /* Elegant font */
+}
+
+/* Color Palette */
+:root {
+    --dark-bg: #1a1a1a;  /* Deep charcoal */
+    --gold: #d4af37;  /* Elegant gold */
+    --light-gold: #e6c97d; /* Softer gold */
+    --text-light: #f5f5f5; /* Light text */
+    --button-dark: #2a2a2a; /* Dark button */
+    --border-gold: rgba(212, 175, 55, 0.5);
+}
+
+/* Body Background */
+body {
+    background-color: #1a1a1a;
+    color: #d4af37;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    margin: 0;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.top-bar a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.top-bar a:hover {
+    color: #e6c97d;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 8px 20px;
+    box-shadow: 0 2px 5px var(--border-gold);
+}
+
+/* Logo */
+.logo img {
+    height: 60px; /* Adjust for better visibility */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gold);
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* General Section Styling */
+.rates, .inclusions, .contact {
+    text-align: center;
+    padding: 50px;
+}
+
+.rate-card {
+    background: #2a2a2a;
+    padding: 20px;
+    margin: 10px auto;
+    width: 50%;
+    border-radius: 10px;
+    color: var(--gold);
+}
+
+.inclusions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.inclusions li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('BG1.jpg') no-repeat center center/cover;
+    height: 60vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 75px;
+    color: var(--gold);
+}
+.hero-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    max-width: 800px;
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 10px;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Overlay Effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Services */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background: #222;
+}
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.service-item {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-item button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #d4af37;
+    color: #1a1a1a;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Gallery */
+.gallery h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-card {
+    flex: 0 0 33.33%;
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Responsive: 2 images per row on smaller screens */
+@media (max-width: 768px) {
+    .gallery-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+/* 1 image per row on very small screens */
+@media (max-width: 480px) {
+    .gallery-card {
+        flex: 0 0 100%;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .service-container, .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item, .gallery-card {
+        width: 90%;
+    }
+}
+
+/* Footer Styling */
+main {
+    flex: 1; /* Pushes footer down */
+}
+
+.footer {
+    text-align: center;
+    background: #2a2a2a;
+    color: var(--gold);
+    padding: 15px;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer a {
+    color: var(--light-gold);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: white;
+}
